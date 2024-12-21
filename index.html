@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Model Selector</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Machine Learning Model Selector</h1>
+        <form id="modelForm">
+            <div>
+                <label>What is the main objective of your machine learning project?
+                    <span class="tooltip">➤
+                        <span class="tooltiptext">Choose 'Classification' to categorize data, 'Regression' for predicting numerical outcomes, 'Clustering' for grouping similar items, or 'Generation' to create new data instances.</span>
+                    </span>
+                </label>
+                <select id="answer1">
+                    <option value="Classification">Classification</option>
+                    <option value="Regression">Regression</option>
+                    <option value="Clustering">Clustering</option>
+                    <option value="Generation">Generation</option>
+                </select>
+            </div>
+
+            <div>
+                <label>What type of data are you working with?
+                    <span class="tooltip">➤
+                        <span class="tooltiptext">Select 'Tabular' for structured data, 'Image' for visual data requiring CNNs, 'Text' for natural language tasks, or 'Time-Series' for chronological data analysis.</span>
+                    </span>
+                </label>
+                <select id="answer2">
+                    <option value="Tabular">Tabular</option>
+                    <option value="Image">Image</option>
+                    <option value="Text">Text</option>
+                    <option value="Time-Series">Time-Series</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Is your data labeled?
+                    <span class="tooltip">➤
+                        <span class="tooltiptext">Choose 'Yes' if your data includes output labels for training (supervised learning), or 'No' for data without labels (unsupervised learning).</span>
+                    </span>
+                </label>
+                <select id="answer3">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Do you need the model to be interpretable?
+                    <span class="tooltip">➤
+                        <span class="tooltiptext">Select 'Yes' if you require the model's decisions to be explainable (important for regulatory purposes), or 'No' for models where interpretability is less critical.</span>
+                    </span>
+                </label>
+                <select id="answer4">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div>
+                <label>What is the size of your dataset?
+                    <span class="tooltip">➤
+                        <span class="tooltiptext">Select 'Small' for datasets that can be handled by simpler models, 'Medium' for moderate-sized datasets, or 'Large' for big data needing powerful models like deep learning.</span>
+                    </span>
+                </label>
+                <select id="answer5">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="processAnswers()">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
